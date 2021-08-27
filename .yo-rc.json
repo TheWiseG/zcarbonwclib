@@ -1,0 +1,16 @@
+{
+  "generator-ui5-library": {
+    "libraryname": "zcarbonwclib",
+    "namespace": "",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.86.3",
+    "author": "Greg Austin",
+    "newdir": true,
+    "namespaceURI": "",
+    "librarynamespace": "zcarbonwclib",
+    "librarynamespaceURI": "zcarbonwclib",
+    "librarybasepath": "../../../../",
+    "frameworklowercase": "sapui5",
+    "setupCompleted": true
+  }
+}

@@ -1,0 +1,35 @@
+specVersion: "2.5"
+type: library
+metadata:
+  name: zcarbonwclib
+resources:
+  configuration:
+    paths:
+      src: src
+      test: test
+framework:
+  name: SAPUI5
+  version: 1.82.0
+  libraries:
+    - name: sap.ui.core
+    - name: themelib_sap_belize
+      optional: true
+    - name: themelib_sap_fiori_3
+      optional: true
+server:
+  customMiddleware:
+  - name: fiori-tools-proxy
+    afterMiddleware: compression
+    configuration:
+      ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+      backend:
+      - path: /sap
+        url: http://s42020.uxm.sap.com:80
+        client: '100'
+        destination: S4H2020
+      ui5:
+        path:
+        - /resources
+        - /test-resources
+        url: https://ui5.sap.com
+        version:  # The UI5 version, for instance, 1.78.1. Empty means latest version

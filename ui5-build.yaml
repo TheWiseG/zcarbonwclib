@@ -1,0 +1,33 @@
+specVersion: "2.5"
+type: library
+metadata:
+  name: zcarbonwclib
+resources:
+  configuration:
+    paths:
+      src: src
+      test: test
+framework:
+  name: SAPUI5
+  version: 1.82.0
+  libraries:
+    - name: sap.ui.core
+    - name: themelib_sap_belize
+      optional: true
+    - name: themelib_sap_fiori_3
+      optional: true
+builder:
+  customTasks:
+  - name: ui5-task-rollup4ui5
+    beforeTask: replaceVersion
+    configuration:
+      configFile: "./rollup.config2.js"
+---
+# https://sap.github.io/ui5-tooling/pages/extensibility/CustomTasks/
+specVersion: "1.0"
+metadata:
+  name: ui5-task-rollup4ui5
+kind: extension
+type: task
+task:
+  path: lib/rollup4ui5.js

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd">
+	<name>zcarbonwclib</name>
+	<vendor>Greg Austin</vendor>
+	<version>${version}</version>
+	<copyright>${copyright}</copyright>
+	<title>zcarbonwclib</title>
+	<documentation>Some description about zcarbonwclib</documentation>
+	<dependencies>
+		<dependency>
+			<libraryName>sap.ui.core</libraryName>
+		</dependency>
+	</dependencies>
+</library>
